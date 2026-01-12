@@ -1,3 +1,5 @@
+// Given an integer n, write a function to print all numbers from 1 to n (inclusive) using recursion.
+
 package Basics.Recursion;
 
 import java.util.*;
