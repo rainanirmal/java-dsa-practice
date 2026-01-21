@@ -52,3 +52,17 @@ public class max_consecutive_one {
         sc.close();
     }
 }
+
+//output
+// Enter size of array :
+// 8
+// Enter binary elements :
+// 1
+// 1
+// 0
+// 0
+// 1
+// 1
+// 1
+// 0
+// Maximum number of consecutive 1s in the array is : 3

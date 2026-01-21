@@ -40,3 +40,14 @@ public class find_missing_number {
 
     }
 }
+
+//output
+// Enter size of array : 
+// 5
+// Enter elements of array : 
+// 0
+// 3
+// 4
+// 2
+// 1
+// Missing number in the range from 0 to 5 is : 5
