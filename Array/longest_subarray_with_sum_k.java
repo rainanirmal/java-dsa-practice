@@ -15,6 +15,7 @@ public class longest_subarray_with_sum_k {
 
         int start = 0;
         int end = 0;
+        int m = 0;
 
         for(int i = 0 ; i < n ; i ++) {
             sum = 0;
@@ -25,12 +26,17 @@ public class longest_subarray_with_sum_k {
                 if(sum == k) {
                     temp[z++] = count;
 
-                    if(count > 0) {
+                    if(count > m) {
+                        m = count;
                         start = i;
                         end = j;
                     }
                 }
             }
+        }
+
+        if(m == 0) {
+            System.out.println("No subarray found.");
         }
 
         int max = temp[0];
@@ -85,3 +91,15 @@ public class longest_subarray_with_sum_k {
 // Longest subarray contains 4 elements.
 // Elements are :
 // 5 2 1 7
+
+// Enter size of array : 
+// 3
+// Enter elements of array : 
+// -1
+// 1
+// 1
+// Enter sum : 
+// 1
+// Longest subarray contains 3 elements.
+// Elements are : 
+// -1 1 1 
