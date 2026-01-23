@@ -60,3 +60,15 @@ public class sorting_array_of_zero_one_two {
         sc.close();
     }
 }
+
+// output
+// Enter size of array : 
+// 5
+// Enter elements of array : 
+// 1
+// 0
+// 2
+// 1
+// 0
+// Sorted array : 
+// 0 0 1 1 2 
