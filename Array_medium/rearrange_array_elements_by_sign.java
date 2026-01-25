@@ -51,3 +51,16 @@ public class rearrange_array_elements_by_sign {
         sc.close();
     }
 }
+
+// output
+// Enter even size of array : 
+// 6
+// Enter elements of array : 
+// 2
+// 4
+// 5
+// -1
+// -3
+// -4
+// Rearranged array : 
+// 2 -1 4 -3 5 -4
