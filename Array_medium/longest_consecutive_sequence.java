@@ -22,20 +22,31 @@ class longest_consecutive_sequence {
         int count = 1;
         int max = 1;
 
+        int start = 0;
+        int bestStart = 0;
+        int bestEnd = 0;
+
         for(int i = 0 ; i < n - 1 ; i ++) {
             if(arr[i + 1] == arr[i] + 1) {
                 count++;
             }
             else {
                 count = 1;
+                start = i + 1;
             }
 
             if(count > max) {
                 max = count;
+                bestStart = start;
+                bestEnd = i + 1;
             }
         }
 
         System.out.println("Longest consecutive array length : " +max);
+        System.out.println("Elements are:");
+        for(int i = bestStart ; i <= bestEnd ; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
      public static void main(String[] args) {
         
@@ -57,3 +68,17 @@ class longest_consecutive_sequence {
     }
     
 }
+
+// 
+// Enter size of array : 
+// 6
+// Enter elements of array : 
+// 100
+// 1
+// 200
+// 3
+// 2
+// 4
+// Longest consecutive array length : 4
+// Elements are:
+// 1 2 3 4
