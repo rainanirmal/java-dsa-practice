@@ -24,19 +24,19 @@ public class four_sum {
         System.out.println("Quadruplets subarray with target " + k + " is : ");
         for(int i = 0 ; i < n - 3 ; i ++) {
             sum = 0;
-            if(arr[i] > 0 && arr[i] == arr[i - 1]) {
+            if(i > 0 && arr[i] == arr[i - 1]) {
                 continue;
             }
             for(int j = i + 1 ; j < n - 2 ; j ++) {
-                if(arr[j] > 1 && arr[j] == arr[j - 1]) {
+                if(j > 1 && arr[j] == arr[j - 1]) {
                 continue;
                 }
                 for(int z = j + 1 ; z < n - 1 ; z ++) {
-                    if(arr[z] > 2 && arr[z] == arr[z - 1]) {
+                    if(z > 2 && arr[z] == arr[z - 1]) {
                     continue;
                     }
                     for(int t = z + 1 ; t < n ; t ++) {
-                        if(arr[t] > 3 && arr[t] == arr[t - 1]) {
+                        if(t > 3 && arr[t] == arr[t - 1]) {
                         continue;
                         }
                         sum = arr[i] + arr[j] + arr[z] + arr[t];
