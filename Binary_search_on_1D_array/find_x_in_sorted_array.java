@@ -6,9 +6,26 @@ import java.util.*;
 
 class find_x_in_sorted_array {
 
-    public static void find_x(int[] arr , int n) {
+    public static int find_x(int[] arr , int n , int k) {
 
-        
+        int left = 0;
+        int right = n - 1;
+
+        while (left <= right) {
+            
+            int mid = (left + (right - left) / 2);
+
+            if(k == arr[mid]) {
+                return mid;
+            }
+            else if (k > arr[mid]) {
+                left = mid + 1;                
+            }
+            else {
+                right = mid - 1;
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -25,6 +42,43 @@ class find_x_in_sorted_array {
             arr[i] = sc.nextInt();
         }
 
+        System.out.println("Enter target : ");
+        int k = sc.nextInt();
+
+        int index = find_x(arr, n, k);
+
+        if (index > 0) {
+            System.out.println("The target integer " + k + " exists in array and its index is " +index);
+        }
+        else {
+            System.out.println("The target integer " + k + " does not exists in array");   
+        }
         sc.close();
     }
 }
+
+// output
+
+// Enter size of array : 
+// 6
+// Enter elements of array : 
+// -1
+// 0
+// 3
+// 5
+// 9  
+// 12
+// Enter target : 
+// 9       
+// The target integer 9 exists in array and its index is 4
+
+// Enter size of array : 
+// 4
+// Enter elements of array : 
+// 1
+// 2
+// 3
+// 4
+// Enter target : 
+// 8
+// The target integer 8 does not exists in array
