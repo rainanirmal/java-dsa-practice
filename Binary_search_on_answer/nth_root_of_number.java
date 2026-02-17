@@ -20,8 +20,6 @@ public class nth_root_of_number {
         System.out.println("Enter m number : ");
         int m = sc.nextInt();
 
-        
-
         sc.close();
     }
     

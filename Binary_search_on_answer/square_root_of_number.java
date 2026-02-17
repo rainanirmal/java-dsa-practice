@@ -6,17 +6,38 @@ import java.util.*;
 
 public class square_root_of_number {
 
-    public static void square(int n) {
-        int i = 1;
-        int square = 0;
+    // public static void square(int n) {
+    //     int i = 1;
+    //     int square = 0;
 
-        while (i * i <= n) {
-            square = i;
+    //     while (i * i <= n) {
+    //         square = i;
 
-            i++;
+    //         i++;
+    //     }
+
+    //     System.out.println("Square root : " +square);
+    // }
+
+    public static int sqaure(int n) {
+
+        int low = 1;
+        int high = n;
+        int ans = 0;
+
+        while (low <= high) {
+            
+            int mid = low + (high - low) / 2;
+
+            if ((mid * mid) <= n) {
+                ans = mid;
+                low = mid + 1;
+            }
+            else {
+                high = mid - 1;
+            }
         }
-
-        System.out.println("Square root : " +square);
+        return ans;
     }
 
     public static void main(String[] args) {
@@ -26,7 +47,9 @@ public class square_root_of_number {
         System.out.println("Enter a number : ");
         int a = sc.nextInt();
 
-        square(a);
+        int result = sqaure(a);
+
+        System.out.println("Square root : " +result);
 
         sc.close();
     }
