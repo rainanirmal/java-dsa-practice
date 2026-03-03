@@ -62,3 +62,15 @@ public class kth_missing_positive_number {
 // Enter missing number kth position : 
 // 6
 // Missing kth index number : 9
+
+// Enter size of array : 
+// 5
+// Enter elements of array : 
+// 1
+// 4
+// 6
+// 8
+// 99
+// Enter missing number kth position : 
+// 3
+// Missing kth index number : 5
