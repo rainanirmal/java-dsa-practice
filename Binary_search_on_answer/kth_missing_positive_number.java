@@ -6,7 +6,7 @@ public class kth_missing_positive_number {
 
     public static int missing(int[] arr , int n , int k) {
 
-        int low = 1;
+        int low = 0;
         int high = n - 1;
 
         while (low <= high) {
