@@ -4,42 +4,18 @@ import java.util.*;
 
 public class kth_missing_positive_number {
 
-    public static int missing_num(int[] arr , int mid , int k) {
-
-        int count = 0;
-
-        for(int i = 0 ; i < arr.length ; i ++) {
-            if (arr[i] == mid) {
-                break;
-            }
-
-            if(arr[i] > (i + 1)) {
-                count = arr[i] - (i + 1);
-
-                if(count == k) {
-                    break;
-                }
-            }
-        }
-
-        return count;
-    }
-
     public static int missing(int[] arr , int n , int k) {
 
         int low = 1;
-        int high = arr.length + k;
-
-        int missing = high;
+        int high = n - 1;
 
         while (low <= high) {
             
             int mid = low + (high - low) / 2;
 
-            int ans = missing_num(arr, mid, k);
+            int missing = arr[mid] - (mid + 1);
 
-            if(ans <= k) {
-                missing = mid;
+            if(missing < k ) {
                 low = mid + 1;
             }
             else {
@@ -47,7 +23,7 @@ public class kth_missing_positive_number {
             }
         }
 
-        return missing;
+        return low + k;
     } 
     public static void main(String[] args) {
         
@@ -74,3 +50,15 @@ public class kth_missing_positive_number {
         sc.close();
     }    
 }
+
+// output
+// Enter size of array : 
+// 4
+// Enter elements of array : 
+// 3
+// 5
+// 7
+// 10
+// Enter missing number kth position : 
+// 6
+// Missing kth index number : 9
