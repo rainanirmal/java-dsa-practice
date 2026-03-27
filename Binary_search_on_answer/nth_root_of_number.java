@@ -1,3 +1,5 @@
+// Given two numbers N and M, find the Nth root of M. The Nth root of a number M is defined as a number X such that when X is raised to the power of N, it equals M. If the Nth root is not an integer, return -1.
+
 package Binary_search_on_answer;
 
 import java.util.*;
