@@ -1,3 +1,5 @@
+// Given an integer array nums of size N, sorted in ascending order with distinct values, and then rotated an unknown number of times (between 1 and N), find the minimum element in the array.
+
 package Binary_search_on_1D_array;
 
 import java.util.*;
