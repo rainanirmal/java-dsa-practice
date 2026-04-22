@@ -1,3 +1,5 @@
+// select minimum and swap
+
 package Sorting;
 
 import java.util.*;
@@ -12,10 +14,14 @@ public class selection_sort {
                     min = j;
                 }
             }
-            int temp = arr[i];
-            arr[i] = arr[min];
-            arr[min] = temp;
+            swap(arr, i, min);
         }
+    }
+
+    public static void swap(int arr[] , int i , int min) {
+        int temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
     }
 
     public static void main(String[] args) {
@@ -45,3 +51,16 @@ public class selection_sort {
     }
     
 }
+
+// output
+// Enter size of array : 
+// 5
+// Enter elements of array : 
+// 5
+// 4
+// 4
+// 1
+// 1
+
+// Sorted array : 
+// 1 1 4 4 5 
