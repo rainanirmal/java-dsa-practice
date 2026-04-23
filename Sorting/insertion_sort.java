@@ -9,14 +9,18 @@ public class insertion_sort {
         for(int i = 0 ; i < n ; i ++) {
             int j = i ;
             while(j > 0 && arr[j - 1] > arr[j]) {
-                int temp = arr[j - 1];
-                arr[j - 1] = arr[j];
-                arr[j] = temp;
+                insertion(arr, j);
                 j --;
             }
         }
     }
     
+    public static void insertion_swap(int[] arr , int j) {
+        int temp = arr[j - 1];
+        arr[j - 1] = arr[j];
+        arr[j] = temp;
+    }
+
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
@@ -41,3 +45,15 @@ public class insertion_sort {
         sc.close();
     }
 }
+
+// output
+// Enter size of array : 
+// 5
+// Enter elements of array : 
+// 7
+// 4
+// 1
+// 5
+// 3
+// Sorted array : 
+// 1 3 4 5 7 
