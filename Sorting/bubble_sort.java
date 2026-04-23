@@ -17,7 +17,7 @@ public class bubble_sort {
         // }
 
 
-        for(int i = 1 ; i < n ; i ++) {
+        for(int i = 0 ; i < n - 1; i ++) {
             int didSwap = 0;
             for(int j = 0 ; j < n - i - 1 ; j ++) {
                 if (arr[j] > arr[j + 1]) {
@@ -60,3 +60,15 @@ public class bubble_sort {
         sc.close();
     }
 }
+
+// output
+// Enter size of array : 
+// 5
+// Enter elements of array : 
+// 5
+// 4
+// 4
+// 1
+// 1
+// Sorted array : 
+// 1 1 4 4 5 
