@@ -6,6 +6,31 @@ import java.util.*;
 
 public class search_in_2D_array {
 
+    public static boolean target(int[][] arr , int row , int col , int target) {
+        int low = 0;
+        int high = row * col - 1;
+
+        while (low <= high) {
+            
+            int mid = low + (high - low) / 2;
+
+            int r = mid / col;
+            int c = mid % col;
+
+            if (arr[r][c] == target) {
+                return true;
+            }
+            else if (arr[r][c] > target) {
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
@@ -28,6 +53,45 @@ public class search_in_2D_array {
         System.out.println("Enter target : ");
         int target = sc.nextInt();
 
+        boolean ans = target(matrix, row, col, target);
+
+        System.out.println(ans);
+
         sc.close();
     }
 }
+
+// output 
+// Enter number of rows : 
+// 3
+// Enter number of columns : 
+// 4
+// Enter elements of matrix : 
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+// 11
+// 12
+// Enter target : 
+// 8
+// true
+
+// Enter number of rows : 
+// 2
+// Enter number of columns : 
+// 2
+// Enter elements of matrix : 
+// 1
+// 2
+// 3
+// 4
+// Enter target : 
+// 8
+// false
