@@ -6,17 +6,39 @@ import java.util.Scanner;
 
 public class search_in_2D_array_II {
 
-    public static boolean target_2D(int[] r , int target) {
+    public static boolean target_2D(int[] row , int target) {
+
+        int low = 0;
+        int high = row.length - 1;
+
+        while (low <= high) {
+            
+            int mid = low + (high - low) / 2;
+
+            if (row[mid] == target) {
+                return true;
+            }
+            else if (row[mid] > target) {
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
 
         return false;
-
     }
 
-    public static boolean search_in_2D(int[][] arr , int r , int c , int target) {
+    public static boolean search_in_2D(int[][] arr , int target) {
 
-        for(int i = 0 ; i < r ; i ++) {
-            if (target >= arr[i][0] && target <= arr[i][c]) {
-                return target_2D(arr[r], target);
+        int row = arr.length;
+        int col = arr[0].length;
+
+        for(int i = 0 ; i < row ; i ++) {
+            if (target >= arr[i][0] && target <= arr[i][col - 1]) {
+                if (target_2D(arr[i] , target)) {
+                    return true;
+                }
             }
         }
         
@@ -45,6 +67,61 @@ public class search_in_2D_array_II {
         System.out.println("Enter target : ");
         int target = sc.nextInt();
 
+        if (search_in_2D(matrix , target)) {
+            System.out.println(target + " exists in matrix");
+        }
+        else {
+            System.out.println(target + " does not exists in matrix");
+        }
+
         sc.close();
     }
 }
+
+// output 
+// Enter number of rows : 
+// 2
+// Enter number of columns : 
+// 2
+// Enter elements of matrix : 
+// 14
+// 18
+// 15
+// 20
+// Enter target : 
+// 18
+// 18 exists in matrix
+
+// Enter number of rows : 
+// 5
+// Enter number of columns : 
+// 5
+// Enter elements of matrix : 
+// 1
+// 4
+// 7
+// 11
+// 15
+// 2
+// 5
+// 8
+// 12
+// 19
+// 3
+// 6
+// 9 
+// 16
+// 22
+// 10
+// 13
+// 14
+// 17
+// 24
+// 18
+// 21
+// 23
+// 26
+// 30
+// Enter target : 
+// 5
+// 5 exists in matrix
