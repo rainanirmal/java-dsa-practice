@@ -7,6 +7,41 @@ package Binary_search_on_2D_array;
 import java.util.Scanner;
 
 public class search_peak_element_II {
+
+    public static void peak_element(int[][] arr , int row , int column) {
+        
+        int low = 0;
+        int high = column - 1;
+        int a = 0;
+        int b = 0;
+
+        while(low <= high) {
+
+            int mid = low + (high - low) / 2;
+
+            int max = 0;
+            int index = 0;
+
+            for(int i = 0 ; i < row ; i ++) {
+                if(arr[i][mid] > max) {
+                    max = arr[i][mid];
+                    index = i;
+                }
+            }
+
+            a = index;
+            b = mid;
+
+            if (max < arr[index][mid - 1]) {
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+
+        System.out.println("Peak element : " + arr[a][b]);
+    }
     
     public static void main(String[] args) {
         
@@ -26,6 +61,8 @@ public class search_peak_element_II {
                 matrix[i][j] = sc.nextInt();
             }
         }
+
+        peak_element(matrix, row, col);
 
         sc.close();
     }
