@@ -12,35 +12,43 @@ public class search_peak_element_II {
         
         int low = 0;
         int high = column - 1;
-        int a = 0;
-        int b = 0;
 
         while(low <= high) {
 
             int mid = low + (high - low) / 2;
 
             int max = 0;
-            int index = 0;
 
             for(int i = 0 ; i < row ; i ++) {
-                if(arr[i][mid] > max) {
-                    max = arr[i][mid];
-                    index = i;
+                if(arr[i][mid] > arr[max][mid]) {
+                    max = i;
                 }
             }
 
-            a = index;
-            b = mid;
+            int current = arr[max][mid];
 
-            if (max < arr[index][mid - 1]) {
+            int left = -1;
+            if(mid - 1 >= 0) {
+                left = arr[max][mid - 1];
+            }
+
+            int right = -1;
+            if(mid + 1 < column) {
+                right = arr[max][mid + 1];
+            }
+
+            if(current > left && current > right) {
+                System.out.println("Peak element : " + current );
+                System.out.println("Index : [" + max + "][" + mid + "]");
+                return;
+            }
+            else if(current < left) {
                 high = mid - 1;
             }
             else {
                 low = mid + 1;
             }
         }
-
-        System.out.println("Peak element : " + arr[a][b]);
     }
     
     public static void main(String[] args) {
@@ -67,3 +75,33 @@ public class search_peak_element_II {
         sc.close();
     }
 }
+
+// output
+// Enter number of rows : 
+// 3
+// Enter number of columns : 
+// 3
+// Enter elements of matrix : 
+// 10
+// 20
+// 15
+// 21
+// 30
+// 14
+// 7
+// 16
+// 32
+// Peak element : 30
+// Index : [1][1]
+
+// Enter number of rows : 
+// 2
+// Enter number of columns : 
+// 2
+// Enter elements of matrix : 
+// 10
+// 7
+// 11
+// 7
+// Peak element : 11
+// Index : [1][0]
