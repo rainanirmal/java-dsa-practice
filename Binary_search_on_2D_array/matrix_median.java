@@ -5,6 +5,28 @@ package Binary_search_on_2D_array;
 import java.util.Scanner;
 
 public class matrix_median {
+
+    public static int high_element(int[][] matrix , int row , int column) {
+
+        int high = matrix[0][0];
+
+        for(int i = 0 ; i < row ; i ++) {
+            for(int j = column - 1; j < column ; j ++) {
+                if(high < matrix[i][j]) {
+                    high = matrix[i][j];
+                }
+            }
+        }
+
+        return high;
+
+    }
+
+    public static void median(int[][] matrix, int row, int column) {
+        int low = matrix[0][0];
+        int high = high_element(matrix, row, column);
+
+    }
     
     public static void main(String[] args) {
         
@@ -24,6 +46,8 @@ public class matrix_median {
                 matrix[i][j] = sc.nextInt();
             }
         }
+
+        // median(matrix, row, col);
 
         sc.close();
     }
