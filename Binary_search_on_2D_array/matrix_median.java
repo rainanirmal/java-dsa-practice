@@ -22,9 +22,41 @@ public class matrix_median {
 
     }
 
+    public static int smallerEquals(int[][] matrix , int row , int column , int mid) {
+
+        int count = 0;
+
+        for(int i = 0 ; i < row ; i ++) {
+            for(int j = 0 ; j < column ; j ++) {
+                if (matrix[i][j] <= mid) {
+                    count++;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+        return count;
+    }
+
     public static void median(int[][] matrix, int row, int column) {
         int low = matrix[0][0];
         int high = high_element(matrix, row, column);
+
+        int required = (row * column) / 2;
+
+        while (low <= high) {
+            
+            int mid = low + (high - low) / 2;
+
+            int smallerEquals = smallerEquals(matrix, row, column, mid);
+
+            System.out.println(smallerEquals);
+            
+        }
+
+        
 
     }
     
@@ -47,7 +79,7 @@ public class matrix_median {
             }
         }
 
-        // median(matrix, row, col);
+        median(matrix, row, col);
 
         sc.close();
     }
