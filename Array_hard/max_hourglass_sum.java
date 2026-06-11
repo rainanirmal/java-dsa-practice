@@ -73,3 +73,70 @@ public class max_hourglass_sum {
     }
     
 }
+
+// output 
+// Enter number of rows : 
+// 6
+// Enter number of columns : 
+// 6
+// Enter elements of 0th row : 
+// 1
+// 1
+// 1
+// 0
+// 0
+// 0
+// Enter elements of 1th row : 
+// 0
+// 1
+// 0
+// 0
+// 0
+// 0
+// Enter elements of 2th row : 
+// 1
+// 1
+// 1
+// 0
+// 0
+// 0
+// Enter elements of 3th row : 
+// 0
+// 0
+// 2
+// 4
+// 4
+// 0
+// Enter elements of 4th row : 
+// 0
+// 0
+// 0
+// 2
+// 0
+// 0
+// Enter elements of 5th row : 
+// 0
+// 0
+// 1
+// 2
+// 4
+// 0
+// Highest sum : 19
+
+// Enter number of rows : 
+// 3
+// Enter number of columns : 
+// 3
+// Enter elements of 0th row : 
+// 2
+// 4
+// 4
+// Enter elements of 1th row : 
+// 0
+// 2
+// 0
+// Enter elements of 2th row : 
+// 1
+// 2
+// 4
+// Highest sum : 19
