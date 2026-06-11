@@ -89,3 +89,43 @@ public class matrix_median {
         sc.close();
     }
 }
+
+// output
+// Enter number of rows : 
+// 3
+// Enter number of columns : 
+// 5
+// Enter elements of matrix : 
+// 1
+// 5
+// 7
+// 9
+// 11
+// 2
+// 3
+// 4
+// 5
+// 10
+// 9
+// 10
+// 12
+// 14
+// 16
+// Median of the given matrix is : 9
+
+// Enter number of rows : 
+// 3
+// Enter number of columns : 
+// 3
+// Enter elements of matrix : 
+// 1
+// 4
+// 9
+
+// 2
+// 5
+// 6
+// 3
+// 7
+// 8
+// Median of the given matrix is : 5
