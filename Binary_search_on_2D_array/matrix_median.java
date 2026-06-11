@@ -40,7 +40,7 @@ public class matrix_median {
         return count;
     }
 
-    public static void median(int[][] matrix, int row, int column) {
+    public static int median(int[][] matrix, int row, int column) {
         int low = matrix[0][0];
         int high = high_element(matrix, row, column);
 
@@ -52,12 +52,15 @@ public class matrix_median {
 
             int smallerEquals = smallerEquals(matrix, row, column, mid);
 
-            System.out.println(smallerEquals);
-            
+            if (smallerEquals <= required) {
+                low = mid + 1;
+            }
+            else {
+                high = mid - 1;
+            }
         }
 
-        
-
+        return low;
     }
     
     public static void main(String[] args) {
@@ -79,7 +82,9 @@ public class matrix_median {
             }
         }
 
-        median(matrix, row, col);
+        int median = median(matrix, row, col);
+
+        System.out.println("Median of the given matrix is : " + median);
 
         sc.close();
     }
