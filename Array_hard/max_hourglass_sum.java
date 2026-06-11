@@ -17,7 +17,7 @@ public class max_hourglass_sum {
 
             int index = 0;
 
-            while (index < row - 2) {
+            while (index < column - 2) {
                 int count = 0;
 
                 for(int j = index ; j <= index + 2 ; j ++) {
