@@ -19,7 +19,7 @@ public class matrix_diagonal_difference {
         }
 
         for(int i = 0 ; i < row ; i ++) {
-            for(int j = 2 - i ; j <= 2 - i ; j ++) {
+            for(int j = row - 1 - i ; j <= row - 1 - i ; j ++) {
                 right_diagonal = right_diagonal + matrix[i][j];
             }
         }
@@ -77,19 +77,27 @@ public class matrix_diagonal_difference {
 // Absolute difference between the sums of diagonals : 2
 
 // Enter number of rows : 
-// 3
+// 4
 // Enter number of columns : 
-// 3
+// 4
 // Enter elements of 0th row : 
-// 11
-// 2
-// 4
+// -1
+// 1
+// -7
+// -8
 // Enter elements of 1th row : 
-// 4
-// 5
-// 6
+// -10
+// -8
+// -5
+// -2
 // Enter elements of 2th row : 
-// 10
-// 8
-// -12
-// Absolute difference between the sums of diagonals : 15
+// 0
+// 9
+// 7
+// -1
+// Enter elements of 3th row : 
+// 4
+// 4
+// -2
+// 1
+// Absolute difference between the sums of diagonals : 1
