@@ -56,3 +56,40 @@ public class matrix_diagonal_difference {
     }
     
 }
+
+// output 
+// Enter number of rows : 
+// 3
+// Enter number of columns : 
+// 3
+// Enter elements of 0th row : 
+// 1
+// 2
+// 3
+// Enter elements of 1th row : 
+// 4
+// 5
+// 6
+// Enter elements of 2th row : 
+// 9
+// 8
+// 9
+// Absolute difference between the sums of diagonals : 2
+
+// Enter number of rows : 
+// 3
+// Enter number of columns : 
+// 3
+// Enter elements of 0th row : 
+// 11
+// 2
+// 4
+// Enter elements of 1th row : 
+// 4
+// 5
+// 6
+// Enter elements of 2th row : 
+// 10
+// 8
+// -12
+// Absolute difference between the sums of diagonals : 15
