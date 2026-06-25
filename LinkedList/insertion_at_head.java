@@ -72,3 +72,26 @@ public class insertion_at_head {
     }
     
 }
+
+// output
+// Enter the size of list : 
+// 3
+// Enter elements of list : 
+// 1
+// 2
+// 3
+// Enter element to add at head of linked list : 
+// 4
+// 4 -> 1 -> 2 -> 3 -> null
+
+// Enter the size of list : 
+// 5
+// Enter elements of list : 
+// 1
+// 2
+// 3
+// 4
+// 5
+// Enter element to add at head of linked list : 
+// 10
+// 10 -> 1 -> 2 -> 3 -> 4 -> 5 -> null
