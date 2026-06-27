@@ -76,3 +76,25 @@ public class deletion_of_head {
     }
     
 }
+
+// output
+// Enter the size of list : 
+// 5
+// Enter elements of list : 
+// 1
+// 2
+// 3
+// 4
+// 5
+// Traversing linked list after removing head : 
+// 2 -> 3 -> 4 -> 5 -> null
+
+// Enter the size of list : 
+// 4
+// Enter elements of list : 
+// 8
+// 3
+// 4
+// 5
+// Traversing linked list after removing head : 
+// 3 -> 4 -> 5 -> null
