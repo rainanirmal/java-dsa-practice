@@ -96,3 +96,29 @@ public class search_in_linked_list {
     }
     
 }
+
+// output
+// Enter the size of list : 
+// 4
+// Enter elements of list : 
+// 1
+// 2
+// 3
+// 4
+// Enter element to search in linked list : 
+// 1
+// Traversing array as a linked list : 
+// 1 -> 2 -> 3 -> 4 -> null
+// The key 1 is present in linked list
+
+// Enter the size of list : 
+// 3
+// Enter elements of list : 
+// 1
+// 2
+// 3
+// Enter element to search in linked list : 
+// 6
+// Traversing array as a linked list : 
+// 1 -> 2 -> 3 -> null
+// The key 6 is not spresent in linked list
