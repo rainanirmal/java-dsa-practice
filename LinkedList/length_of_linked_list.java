@@ -69,3 +69,28 @@ public class length_of_linked_list {
     }
     
 }
+
+// output
+// Enter the size of list : 
+// 6
+// Enter elements of list : 
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// Traversing array as a linked list : 
+// 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> null
+// Length of linked list : 6
+
+// Enter the size of list : 
+// 4
+// Enter elements of list : 
+// 8
+// 7
+// 6
+// 5
+// Traversing array as a linked list : 
+// 8 -> 7 -> 6 -> 5 -> null
+// Length of linked list : 4
